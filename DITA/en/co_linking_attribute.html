@@ -1,0 +1,47 @@
+---
+# Generated from DITA source
+layout: default
+title: "@linking"
+index: "../toc.html"
+---
+
+<nav role="toc" class="col-lg-3"><ul><li><a href="../en/to_topics_information_types.html">Topics and information types</a></li><li><a href="../en/to_creating_task_topic.html">Task topics</a></li><li><a href="../en/to_creating_concept_topic.html">Concept topics</a></li><li><a href="../en/to_reference_topics.html">Reference topics</a></li><li><a href="../en/to_light_fullon.html">DITA light and full-on DITA</a></li><li><a href="../en/to_ditamaps_bookmaps.html">DITA maps and bookmaps</a></li><li><a href="../en/to_creating_links.html">Creating links</a><ul class="nav nav-list"><li><a href="../en/to_about_creating_links.html">About creating links</a></li><li><a href="../en/to_creating_inline_links.html">Creating inline links</a></li><li><a href="../en/to_creating_related_links.html">Creating related links</a><ul class="nav nav-list"><li><a href="../en/co_different_ways_to_create_related_links.html">Different ways to create related links</a></li><li><a href="../en/ta_insert_reference_in_relatedlinks.html">To insert a reference in &lt;related-links&gt;</a></li><li><a href="../en/ta_to_create_a_reltable.html">To create a &lt;reltable&gt;</a></li><li class="active"><a href="../en/co_linking_attribute.html">@linking</a></li></ul></li></ul></li><li><a href="../en/to_reusing_content.html">Re-using content</a></li><li><a href="../en/to_conditional_processing.html">Conditional processing</a></li><li><a href="../en/to_publishing.html">Publishing</a></li><li><a href="../en/to_tips_and_tricks.html">Tips and tricks</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+   <h1 class="title topictitle1" id="ariaid-title1">@linking</h1>
+   <div class="body conbody">
+      <section class="section"><h2 class="title sectiontitle">The @linking attribute</h2>
+         
+         <div class="p">With the <code class="keyword markupname xmlatt">@linking</code> attribute, you can control how and when links are displayed in your output. Sometimes it can more useful for certain links not to be displayed, for instance, when you might want an installation topic to link to an uninstallation topic, but not the other way around. You can adjust the links by setting the <code class="keyword markupname xmlatt">@linking</code> attribute to one of the following values:<figure class="fig fignone" id="conceptId__fig_stp_cn3_jn">
+               <img class="image" id="conceptId__image_y41_dn3_jn" src="../_media/graphics/Linking_attribute.PNG">
+            </figure><table class="table frame-all" id="conceptId__table_msf_1pk_fn"><caption></caption><colgroup><col style="width:24mm"><col style="width:101mm"></colgroup><thead class="thead">
+                     <tr class="row">
+                        <th class="entry" id="conceptId__table_msf_1pk_fn__entry__1">Value</th>
+                        <th class="entry" id="conceptId__table_msf_1pk_fn__entry__2">Result</th>
+                     </tr>
+                  </thead><tbody class="tbody">
+                     <tr class="row">
+                        <td class="entry" headers="conceptId__table_msf_1pk_fn__entry__1">none</td>
+                        <td class="entry" headers="conceptId__table_msf_1pk_fn__entry__2">This topic can't be linked to, nor can it link to other topics.</td>
+                     </tr>
+                     <tr class="row">
+                        <td class="entry" headers="conceptId__table_msf_1pk_fn__entry__1">normal</td>
+                        <td class="entry" headers="conceptId__table_msf_1pk_fn__entry__2">The default setting. A topic with this value can be the target of links and can link to other topics.</td>
+                     </tr>
+                     <tr class="row">
+                        <td class="entry" headers="conceptId__table_msf_1pk_fn__entry__1">sourceonly</td>
+                        <td class="entry" headers="conceptId__table_msf_1pk_fn__entry__2">This topic can only link to others, but cannot be linked to.</td>
+                     </tr>
+                     <tr class="row">
+                        <td class="entry" headers="conceptId__table_msf_1pk_fn__entry__1">targetonly</td>
+                        <td class="entry" headers="conceptId__table_msf_1pk_fn__entry__2">This topic can only be linked to, but can't link to others.</td>
+                     </tr>
+                  </tbody></table></div>
+      </section>
+      <section class="section"><h2 class="title sectiontitle">Applied to relationship tables</h2>
+         
+         <div class="p">Using these values of the <code class="keyword markupname xmlatt">@linking</code> attribute, you can create different types of relationship tables, depending on how you want related links to appear in your output. There are two main types of tables:<ul class="ul" id="conceptId__ul_u3k_nf2_fn">
+               <li class="li">One-way link table:<p class="p">This table is a two-column table in which you can create one-way links. You do this by setting the <code class="keyword markupname xmlatt">@linking</code> attribute on the first column to 'source-only' and on the second column to 'target-only'. This way you ensure that only topics from the first column contain links to the second column and that topics from the second column do not link back.</p></li>
+               <li class="li">Two-way link tables:<p class="p">This table is a two-column table in which you can create two-way links. In order to do this, you do not need to use any attributes as the default setting for linking is set to 'normal'. The relevant topic references will link to one another.</p></li>
+            </ul></div>
+      </section>
+   </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../en/to_creating_related_links.html">Creating related links</a></div></div></nav></article></main>

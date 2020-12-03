@@ -1,0 +1,97 @@
+---
+# Generated from DITA source
+layout: default
+title: "Guidelines for creating links"
+index: "../toc.html"
+---
+
+<nav role="toc" class="col-lg-3"><ul><li><a href="../en/to_topics_information_types.html">Topics and information types</a></li><li><a href="../en/to_creating_task_topic.html">Task topics</a></li><li><a href="../en/to_creating_concept_topic.html">Concept topics</a></li><li><a href="../en/to_reference_topics.html">Reference topics</a></li><li><a href="../en/to_light_fullon.html">DITA light and full-on DITA</a></li><li><a href="../en/to_ditamaps_bookmaps.html">DITA maps and bookmaps</a></li><li><a href="../en/to_creating_links.html">Creating links</a><ul class="nav nav-list"><li><a href="../en/to_about_creating_links.html">About creating links</a><ul class="nav nav-list"><li><a href="../en/co_why_create_links.html">Why create links?</a></li><li><a href="../en/co_types_links.html">Different types of links</a></li><li class="active"><a href="../en/re_guidelines_creating_links.html">Guidelines for creating links</a></li><li><a href="../en/co_role_of_IDs.html">The role of IDs</a></li></ul></li><li><a href="../en/to_creating_inline_links.html">Creating inline links</a></li><li><a href="../en/to_creating_related_links.html">Creating related links</a></li></ul></li><li><a href="../en/to_reusing_content.html">Re-using content</a></li><li><a href="../en/to_conditional_processing.html">Conditional processing</a></li><li><a href="../en/to_publishing.html">Publishing</a></li><li><a href="../en/to_tips_and_tricks.html">Tips and tricks</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+   <h1 class="title topictitle1" id="ariaid-title1">Guidelines for creating links</h1>
+   <div class="body refbody">
+      <section class="section"><h2 class="title sectiontitle">Do not over-use inline links</h2>
+         
+         <div class="p">It is easy to over-use inline links in your text, rendering it confusing to the reader. It is important to use them only when necessary and keep in mind the following guidelines:<ul class="ul" id="reference_n3w_whm_bn__ul_sx3_rpd_fn">
+               <li class="li">Avoid inline links to tables and figures in a topic.<p class="p">This should be avoided as you should keep your topics short and self-contained. These links can become difficult to maintain when you update your topics, for instance by deleting a table or moving it to a different topic. They can also make it difficult to re-use topics. Instead, you can consider re-using the table or the figure somewhere else in the form of a content reference.</p></li>
+               <li class="li">Create inline links to repeated steps<p class="p">You might use phrases such as 'Repeat step 2 to add each topic to the DITA map'. In this case you will need to update this phrase every time you add a step before 'step 2'. You can solve this by adding an &lt;xref&gt; element that links to the relevant step. In doing so, every time the numbering changes in the steps, the &lt;xref&gt; element will ensure the text changes automatically.</p></li>
+               <li class="li">Create inline links to high-level tasks.<p class="p">If you have a manual that contains a task flow with 10 different task topics for installation, another 15 task topics for post-installation configuration and yet another set of tasks for setting up security, the user might start to lose track of the big picture. As these tasks might be spread throughout your DITA map, it can happen you can't take advantage of the default linking system. In this case, you can use inline links to show users a roadmap of the task flow they will have to follow. This way, they can plan for tasks they will need to complete in the future.</p></li>
+            </ul></div>
+      </section>
+      <section class="section"><h2 class="title sectiontitle">Think about the phrasing and positioning of inline links</h2>
+         
+         <div class="p">For all their advantages, inline links are not without flaws. Tests conducted by user experience specialist Jared Spool support the view that links outside of the text are more effective than inline, embedded links. He concluded that: 
+            <ul class="ul" id="reference_n3w_whm_bn__ul_dgn_mvk_fn">
+               <li class="li">Links are less usable when embedded in the text.</li>
+               <li class="li">Longer links are more effective than shorter ones.</li>
+               <li class="li">People scan for target words - the scent of information.</li>
+            </ul></div>
+      </section>
+      <section class="section"><h2 class="title sectiontitle">Do not over-use relationship tables</h2>
+         
+         <p class="p">Relationship tables are useful in linking content that does not get linked by the hierarchical linking system. Still, it is important not to link too much. What applies for inline linking, applies for relationship tables as well. Too many links will merely confuse the user.</p>
+         <div class="p">A good general rule to keep in mind is that hierarchical linking is nearly error-proof and low maintenance. As such, it is a good system to rely on. Only start adding relationship tables if you require relevant topics of information to be linked for the user's convenience. When you do, follow these guidelines:<ul class="ul" id="reference_n3w_whm_bn__ul_qdw_sh2_fn">
+               <li class="li">Add links for sibling topics if you set the linking attribute to 'none' in the parent topic but want to have related links for a select few of the child topics.</li>
+               <li class="li">Add links between topics that would not otherwise be there in the hierarchy of links.</li>
+               <li class="li">Add links to topics outside of the hierarchy in the current DITA map.</li>
+               <li class="li">Keep the number of related links in each topic to fewer than five when possible.</li>
+            </ul></div>
+      </section>
+      <section class="section"><h2 class="title sectiontitle">Add collection-type links</h2>
+         
+         <p class="p">A collection type defines a relationship among nested topics and affects the way in which automatic links are generated in the output of your DITA map.</p>
+         <div class="p">You create a collection of links by setting the value of the @collection-type attribute, which defines how the nested topics are related. You can apply the @collection-type attribute to:<ul class="ul" id="reference_n3w_whm_bn__ul_dw5_nl2_fn">
+               <li class="li"><code class="keyword markupname xmlelement">&lt;topicref&gt;</code> elements in a DITA map; these have to be the parent topicref elements in the hierarchy.</li>
+               <li class="li"><code class="keyword markupname xmlelement">&lt;topicgroup&gt;</code> elements in a relationship table</li>
+               <li class="li">Columns in relationship tables</li>
+            </ul></div>
+         <div class="note note note_note"><span class="note__title">Note:</span> Although <code class="keyword markupname xmlatt">@collection-type</code> attributes are valid in relationship table relcell elements, some don't make a lot of sense in that context. For example, if you set a <code class="keyword markupname xmlatt">@collection-type</code> in a relationship table cell to 'sequence', it will result in a Next Topic link in the output linking to the next topic referenced in the cell, rather than to the next topic in the TOC sequence (as may logically be expected by the reader).</div>
+         <div class="p">You can set the values of the <code class="keyword markupname xmlatt">@collection-type</code> attribute to one of the four following values:<figure class="fig fignone" id="reference_n3w_whm_bn__fig_lcy_j4c_jn">
+               <img class="image" id="reference_n3w_whm_bn__image_ucz_j4c_jn" src="../_media/graphics/collection_type.PNG">
+            </figure><table class="table frame-all" id="reference_n3w_whm_bn__table_u5h_wl2_fn"><caption></caption><colgroup><col style="width:33mm"><col style="width:92mm"></colgroup><thead class="thead">
+                     <tr class="row">
+                        <th class="entry" id="reference_n3w_whm_bn__table_u5h_wl2_fn__entry__1">Collection-type value</th>
+                        <th class="entry" id="reference_n3w_whm_bn__table_u5h_wl2_fn__entry__2">Description</th>
+                     </tr>
+                  </thead><tbody class="tbody">
+                     <tr class="row">
+                        <td class="entry" headers="reference_n3w_whm_bn__table_u5h_wl2_fn__entry__1">choice</td>
+                        <td class="entry" headers="reference_n3w_whm_bn__table_u5h_wl2_fn__entry__2">Not commonly used, but is intended for situations where the reader needs to select one child topic to proceed. This might be useful when the output document is an interactive decision-support application. Most processors treat choice in the same way as unordered.</td>
+                     </tr>
+                     <tr class="row">
+                        <td class="entry" headers="reference_n3w_whm_bn__table_u5h_wl2_fn__entry__1">family</td>
+                        <td class="entry" headers="reference_n3w_whm_bn__table_u5h_wl2_fn__entry__2">Links are generated from parent to children, from children to parent, and from sibling to sibling.</td>
+                     </tr>
+                     <tr class="row">
+                        <td class="entry" headers="reference_n3w_whm_bn__table_u5h_wl2_fn__entry__1">sequence</td>
+                        <td class="entry" headers="reference_n3w_whm_bn__table_u5h_wl2_fn__entry__2">Links are generated from parent to children, from children to parent, and from child to previous sibling (if applicable) and next sibling (if applicable). It creates a numbered sequence.</td>
+                     </tr>
+                     <tr class="row">
+                        <td class="entry" headers="reference_n3w_whm_bn__table_u5h_wl2_fn__entry__1">unordered</td>
+                        <td class="entry" headers="reference_n3w_whm_bn__table_u5h_wl2_fn__entry__2">Links are generated from parent to children, and from children to parent. These links can be completed in any order.</td>
+                     </tr>
+                  </tbody></table></div>
+         <div class="p">The following table can help you decide which type is most appropriate for your situation:<table class="table frame-all" id="reference_n3w_whm_bn__table_qgr_nn2_fn"><caption></caption><colgroup><col style="width:85mm"><col style="width:40mm"></colgroup><thead class="thead">
+                     <tr class="row">
+                        <th class="entry" id="reference_n3w_whm_bn__table_qgr_nn2_fn__entry__1">Question</th>
+                        <th class="entry" id="reference_n3w_whm_bn__table_qgr_nn2_fn__entry__2">Value</th>
+                     </tr>
+                  </thead><tbody class="tbody">
+                     <tr class="row">
+                        <td class="entry" headers="reference_n3w_whm_bn__table_qgr_nn2_fn__entry__1">Must the nested task topics be done in a particular order?</td>
+                        <td class="entry" headers="reference_n3w_whm_bn__table_qgr_nn2_fn__entry__2">Sequence</td>
+                     </tr>
+                     <tr class="row">
+                        <td class="entry" headers="reference_n3w_whm_bn__table_qgr_nn2_fn__entry__1">Do the topics represent choices?</td>
+                        <td class="entry" headers="reference_n3w_whm_bn__table_qgr_nn2_fn__entry__2">Choice or family</td>
+                     </tr>
+                     <tr class="row">
+                        <td class="entry" headers="reference_n3w_whm_bn__table_qgr_nn2_fn__entry__1">Can the task topics be done in any order?</td>
+                        <td class="entry" headers="reference_n3w_whm_bn__table_qgr_nn2_fn__entry__2">Unordered or family</td>
+                     </tr>
+                     <tr class="row">
+                        <td class="entry" headers="reference_n3w_whm_bn__table_qgr_nn2_fn__entry__1">Are the topics closely related and do they need links between sibling topics?</td>
+                        <td class="entry" headers="reference_n3w_whm_bn__table_qgr_nn2_fn__entry__2">Family</td>
+                     </tr>
+                  </tbody></table></div>
+      </section>
+   </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../en/to_about_creating_links.html">About creating links</a></div></div></nav></article></main>

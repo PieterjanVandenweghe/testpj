@@ -1,0 +1,41 @@
+---
+# Generated from DITA source
+layout: default
+title: "What are ditavals?"
+index: "../toc.html"
+---
+
+<nav role="toc" class="col-lg-3"><ul><li><a href="../en/to_topics_information_types.html">Topics and information types</a></li><li><a href="../en/to_creating_task_topic.html">Task topics</a></li><li><a href="../en/to_creating_concept_topic.html">Concept topics</a></li><li><a href="../en/to_reference_topics.html">Reference topics</a></li><li><a href="../en/to_light_fullon.html">DITA light and full-on DITA</a></li><li><a href="../en/to_ditamaps_bookmaps.html">DITA maps and bookmaps</a></li><li><a href="../en/to_creating_links.html">Creating links</a></li><li><a href="../en/to_reusing_content.html">Re-using content</a></li><li><a href="../en/to_conditional_processing.html">Conditional processing</a><ul class="nav nav-list"><li><a href="../en/to_about_conditional_processing.html">About conditional processing</a></li><li><a href="../en/to_assigning_conditional_attributes_and_vlues.html">Assigning conditional attributes and values</a></li><li><a href="../en/to_working_with_ditavals.html">Working with ditavals</a><ul class="nav nav-list"><li class="active"><a href="../en/co_what_are_ditavals.html">What are ditavals?</a></li><li><a href="../en/ta_create_ditaval.html">To create a ditaval</a></li><li><a href="../en/ta_apply_ditaval.html">To apply a ditaval during publishing</a></li></ul></li></ul></li><li><a href="../en/to_publishing.html">Publishing</a></li><li><a href="../en/to_tips_and_tricks.html">Tips and tricks</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+   <h1 class="title topictitle1" id="ariaid-title1">What are ditavals?</h1>
+   <div class="body conbody">
+      <section class="section" id="co_what_are_ditavals__section_nqb_ltw_smb">
+         <p class="p" id="co_what_are_ditavals__p_rqf_qvw_smb">DITAVALs are used to define conditional processing. There are different types of processing, which will be outlined here.</p>
+      </section>
+      <section class="section" id="co_what_are_ditavals__section_ckd_yvw_smb"><h2 class="title sectiontitle">Exclude</h2>
+         
+         <p class="p" id="co_what_are_ditavals__p_oqb_ltw_smb">If you want to filter content, you add strings of text to the DITAVAL file, for example: <code class="ph codeph">&lt;prop att="audience" val="expert" action="exclude"&gt;</code>. During publication, this element will be excluded in the output.</p>
+      </section>
+      <section class="section" id="co_what_are_ditavals__section_ifk_1ww_smb"><h2 class="title sectiontitle">Flag</h2>
+         
+         <div class="p" id="co_what_are_ditavals__p_pqb_ltw_smb">By flagging content, you highlight certain elements with a graphic style or give them icons to represent that they only apply for, for example, one appliance model/software version/operating system. These attributes are also logged in a DITAVAL file where you specify a flag to highlight the content. You can do this by:<ul class="ul" id="co_what_are_ditavals__ul_dsd_nhh_gn">
+               <li class="li">Setting the action to <kbd class="ph userinput">flag</kbd> instead of <kbd class="ph userinput">exclude</kbd>.</li>
+               <li class="li">Using the &lt;startflag&gt; element to insert an image to highlight the conditional content.</li>
+               <li class="li">Using the &lt;alt-text&gt; element to provide alternative text for the image.</li>
+            </ul></div>
+      </section>
+      <div class="example">
+         <div class="p" id="co_what_are_ditavals__p_qqb_ltw_smb">You create a DITAVAL file and you specify strings for each Word value:<pre class="pre codeblock"><code>&lt;val&gt;
+&lt;prop att="platform" val="2003" action="flag"&gt;
+&lt;startflag imageref="Word_2003_Icon.jpg"&gt;
+&lt;/startflag&gt;
+&lt;/prop&gt;
+&lt;prop att="platform" val="2007" action="flag"&gt;
+&lt;startflag imageref="Word_2007_Icon.jpg"&gt;
+&lt;/startflag&gt;
+&lt;/prop&gt;
+&lt;/val&gt;</code></pre>When you generate your content based on this DITAVAL file, the steps are flagged accordingly with a logo:<figure class="fig fignone" id="co_what_are_ditavals__fig_qpn_z2d_mn">
+               <img class="image" id="co_what_are_ditavals__image_ss5_1fd_mn" src="../_media/graphics/flagged_output.PNG">
+            </figure></div>
+      </div>
+   </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../en/to_working_with_ditavals.html">Working with ditavals</a></div></div></nav></article></main>

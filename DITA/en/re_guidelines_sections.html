@@ -1,0 +1,42 @@
+---
+# Generated from DITA source
+layout: default
+title: "Guidelines for using sections"
+index: "../toc.html"
+---
+
+<nav role="toc" class="col-lg-3"><ul><li><a href="../en/to_topics_information_types.html">Topics and information types</a><ul class="nav nav-list"><li><a href="../en/to_about_topics_and_information_types.html">About topics and information types</a></li><li><a href="../en/to_guidelines_topics.html">Guidelines for topic-based authoring</a><ul class="nav nav-list"><li><a href="../en/re_guidelines_writing_topics.html">Guidelines for chunking content</a></li><li><a href="../en/re_guidelines_writing_topic_titles.html">Guidelines for writing topic titles</a></li><li><a href="../en/re_guidelines_file_naming_topics.html">Guidelines for file naming</a></li><li class="active"><a href="../en/re_guidelines_sections.html">Guidelines for using sections</a></li></ul></li><li><a href="../en/to_creating_new_topic_general.html">Working with topics</a></li></ul></li><li><a href="../en/to_creating_task_topic.html">Task topics</a></li><li><a href="../en/to_creating_concept_topic.html">Concept topics</a></li><li><a href="../en/to_reference_topics.html">Reference topics</a></li><li><a href="../en/to_light_fullon.html">DITA light and full-on DITA</a></li><li><a href="../en/to_ditamaps_bookmaps.html">DITA maps and bookmaps</a></li><li><a href="../en/to_creating_links.html">Creating links</a></li><li><a href="../en/to_reusing_content.html">Re-using content</a></li><li><a href="../en/to_conditional_processing.html">Conditional processing</a></li><li><a href="../en/to_publishing.html">Publishing</a></li><li><a href="../en/to_tips_and_tricks.html">Tips and tricks</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+   <h1 class="title topictitle1" id="ariaid-title1">Guidelines for using sections</h1>
+   <div class="body refbody">
+      <section class="section">Concept topics and reference topics can be divided into sections. If you write a reference topic with guidelines for using sections, for example, you can create a separate section for each of these guidelines.</section>
+      <section class="section"><h2 class="title sectiontitle">Add an accurate title</h2>
+         
+         <p class="p">Although it is not mandatory to add a title to a section in DITA, it is recommended. If you use sections in a topic, this normally means that you are dealing with a larger topic. Adding a title to each section then clarifies the structure of the topic and increases its scannability.</p>
+      </section>
+      <div class="example">For example, You are writing a topic with guidelines for file naming and created a separate section for each guideline. If you add an accurate title to each section, the reader can use these titles to get an overview of all guidelines.</div>
+      <section class="section"><h2 class="title sectiontitle">Mind Miller's law (7 ± 2)</h2>You do not only have to mind Miller's law (an average person can only hold 7 ± 2 objects in his working memory) when chunking content, it is also a helpful guideline for creating sections. If your topic has too many sections, you have to organize your content differently. You can, for example split the topic into two smaller topics. Each of these topics will then include fewer sections.</section>
+      <section class="section"><h2 class="title sectiontitle">Evaluate the length</h2>
+         
+         <div class="p">When you have written a multi-section topic, check how long each of your sections is. If the sections are too long or too short, you have to organize your information differently:<table class="table frame-all" id="reference_x5c_3lg_bn__table_emg_xhv_5n"><caption></caption><colgroup><col style="width:50 mm"><col style="width:75 mm"></colgroup><thead class="thead">
+                     <tr class="row">
+                        <th class="entry" id="reference_x5c_3lg_bn__table_emg_xhv_5n__entry__1">If the sections are...</th>
+                        <th class="entry" id="reference_x5c_3lg_bn__table_emg_xhv_5n__entry__2">Do the following...</th>
+                     </tr>
+                  </thead><tbody class="tbody">
+                     <tr class="row">
+                        <td class="entry" headers="reference_x5c_3lg_bn__table_emg_xhv_5n__entry__1">Too long (several paragraphs, tables, illustrations...)</td>
+                        <td class="entry" headers="reference_x5c_3lg_bn__table_emg_xhv_5n__entry__2">Promote each section to a separate topic and group the topics under a parent topic.</td>
+                     </tr>
+                     <tr class="row">
+                        <td class="entry" headers="reference_x5c_3lg_bn__table_emg_xhv_5n__entry__1">Too short (only a few sentences)</td>
+                        <td class="entry" headers="reference_x5c_3lg_bn__table_emg_xhv_5n__entry__2">Present the information as a bulleted list or in a table.</td>
+                     </tr>
+                  </tbody></table></div>
+      </section>
+      <section class="section"><h2 class="title sectiontitle">Do not mind the output</h2>
+         
+         <p class="p">If you generate HTML output from DITA topics, you will normally get a separate HTML page per topic. If you want particular topics to be presented on the same page, you could then make them into sections of a large topic.</p>
+         <p class="p">This, however, is improper use of DITA: you should never alter the structure of your topics in function of how they will look in the output. You can sort the same effect by setting the @chunk attribute to "to-concent". The HTML output will then look the way you want it to and your content will still be structured properly.</p>
+      </section>
+   </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../en/to_guidelines_topics.html">Guidelines for topic-based authoring</a></div></div></nav></article></main>

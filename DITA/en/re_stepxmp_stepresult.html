@@ -1,0 +1,72 @@
+---
+# Generated from DITA source
+layout: default
+title: "Adding extra info to a step: &lt;stepxmp&gt;, &lt;stepresult&gt;, &lt;info&gt; and &lt;note&gt; "
+index: "../toc.html"
+---
+
+<nav role="toc" class="col-lg-3"><ul><li><a href="../en/to_topics_information_types.html">Topics and information types</a></li><li><a href="../en/to_creating_task_topic.html">Task topics</a><ul class="nav nav-list"><li><a href="../en/to_dita_elements_task_topics.html">DITA elements for task topics</a><ul class="nav nav-list"><li><a href="../en/co_title_task.html"> Titling the task: &lt;title&gt;</a></li><li><a href="../en/co_context.html">Introducing the task: context and prereq</a></li><li><a href="../en/co_steps_step_cmd.html">Defining the type of procedure: &lt;steps&gt; and &lt;steps-unordered&gt;</a></li><li><a href="../en/co_step_cmd.html">Writing the steps: &lt;step&gt; and &lt;cmd&gt;</a></li><li><a href="../en/co_substeps_choices_choicetable.html">Including substeps or choices: substeps, choices and choicetable</a></li><li class="active"><a href="../en/re_stepxmp_stepresult.html">Adding extra info to a step: &lt;stepxmp&gt;, &lt;stepresult&gt;, &lt;info&gt; and &lt;note&gt; </a></li><li><a href="../en/re_result_postrequisites.html">Concluding the task: &lt;example&gt;, &lt;result&gt; and &lt;postreq&gt;</a></li></ul></li></ul></li><li><a href="../en/to_creating_concept_topic.html">Concept topics</a></li><li><a href="../en/to_reference_topics.html">Reference topics</a></li><li><a href="../en/to_light_fullon.html">DITA light and full-on DITA</a></li><li><a href="../en/to_ditamaps_bookmaps.html">DITA maps and bookmaps</a></li><li><a href="../en/to_creating_links.html">Creating links</a></li><li><a href="../en/to_reusing_content.html">Re-using content</a></li><li><a href="../en/to_conditional_processing.html">Conditional processing</a></li><li><a href="../en/to_publishing.html">Publishing</a></li><li><a href="../en/to_tips_and_tricks.html">Tips and tricks</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+   <h1 class="title topictitle1" id="ariaid-title1">Adding extra info to a step: &lt;stepxmp&gt;, &lt;stepresult&gt;, &lt;info&gt; and &lt;note&gt; </h1>
+   <div class="body conbody">
+      <section class="section">DITA provides a series of elements that allow you to add extra info to your steps. The most common and useful ones are &lt;stepxmp&gt;, &lt;stepresult&gt;, &lt;info&gt; and &lt;note&gt;.</section>
+      <section class="section"><h2 class="title sectiontitle">&lt;stepxmp&gt;</h2>
+         
+         <div class="p">If you want to provide an example of what to do in a particular (sub)step, use the &lt;stepxmp&gt; element. An example helps users understand how to complete the step.<figure class="fig fignone" id="conceptId__fig_ks4_htr_cn">
+               <img class="image" id="conceptId__image_xx2_qj3_gn" src="../_media/graphics/ta_stepxmp.png">
+            </figure></div>
+      </section>
+      <section class="section"><h2 class="title sectiontitle">&lt;stepresult&gt;</h2>
+         
+         <div class="p">If you want to describe the outcome of a particular action, use the &lt;stepresult&gt; element. By adding a result, you can assure users that they are still on the right track. This is especially useful when the result of a step is somewhat strange or worrying.<figure class="fig fignone" id="conceptId__fig_mfd_25r_cn">
+               <img class="image" id="conceptId__image_sqn_vj3_gn" src="../_media/graphics/ta_stepresult.png">
+            </figure></div>
+         <div class="note caution note_caution"><span class="note__title">CAUTION:</span> Do not add a &lt;stepresult&gt; to each step and do not use it to point out obvious results. For example, in software documentation do not use it to indicate that a particular dialog is displayed: users see the dialog on their screen when they are executing the task. If you think the users might get confused about where they are in the interface, you can always start the next step by pointing out which dialog they have to use (e.g. "In the <span class="keyword wintitle">Save as</span> dialog, enter a name for your file and click <span class="ph uicontrol">Save</span>"). </div>
+      </section>
+      <section class="section"><h2 class="title sectiontitle">&lt;info&gt;</h2>
+         
+         <div class="p">If you want to add extra information to a step that does not fit in the &lt;stepxmp&gt; or &lt;stepresult&gt; element, you can use the &lt;info&gt; element. Be careful, however, not to include long conceptual information or extra instructions in the &lt;info&gt; element. All instructions have to be written in a &lt;cmd&gt; element.<figure class="fig fignone" id="conceptId__fig_jqh_g4w_cn">
+               <img class="image" id="conceptId__image_tph_kk3_gn" src="../_media/graphics/ta_note.png">
+            </figure></div>
+         <div class="note tip note_tip"><span class="note__title">Tip:</span> Use the &lt;info&gt; element as a container element for other elements. This is especially useful for elements that cannot be directly inserted into a &lt;step&gt; element (&lt;note&gt;, &lt;fig&gt;, &lt;image&gt;...).</div>
+      </section>
+      <section class="section"><h2 class="title sectiontitle">&lt;note&gt;</h2>
+         
+         <div class="p">If you want to add a remark to a step, such as a warning or a tip, use the &lt;note&gt; element. Because a &lt;note&gt; element cannot directly be inserted into a &lt;step&gt; element, you have to wrap it in an &lt;info&gt; element.<figure class="fig fignone" id="conceptId__fig_brs_spw_cn">
+               <img class="image" id="conceptId__image_qln_yk3_gn" src="../_media/graphics/ta_caution.png">
+            </figure></div>
+         <div class="p">When you insert a &lt;note&gt; element, use the @type attribute to specify which type of note it is. Based on this attribute, a different label can be inserted in front of the note when you publish your topic. The most common types of notes are:<table class="table frame-all" id="conceptId__table_j54_ltw_cn"><caption></caption><colgroup><col style="width:25 mm"><col style="width:100 mm"></colgroup><thead class="thead">
+                     <tr class="row">
+                        <th class="entry" id="conceptId__table_j54_ltw_cn__entry__1">Type</th>
+                        <th class="entry" id="conceptId__table_j54_ltw_cn__entry__2">Description</th>
+                     </tr>
+                  </thead><tbody class="tbody">
+                     <tr class="row">
+                        <td class="entry" headers="conceptId__table_j54_ltw_cn__entry__1">Note</td>
+                        <td class="entry" headers="conceptId__table_j54_ltw_cn__entry__2">General information (not a hazard statement) to which you want to call attention</td>
+                     </tr>
+                     <tr class="row">
+                        <td class="entry" headers="conceptId__table_j54_ltw_cn__entry__1">Notice</td>
+                        <td class="entry" headers="conceptId__table_j54_ltw_cn__entry__2">A potential hazardous situation which, if not avoided, may result in property damage or in an undesirable result or state</td>
+                     </tr>
+                     <tr class="row">
+                        <td class="entry" headers="conceptId__table_j54_ltw_cn__entry__1">Caution</td>
+                        <td class="entry" headers="conceptId__table_j54_ltw_cn__entry__2">A potentially hazardous situation which, if not avoided, may result in minor or moderate injury</td>
+                     </tr>
+                     <tr class="row">
+                        <td class="entry" headers="conceptId__table_j54_ltw_cn__entry__1">Warning</td>
+                        <td class="entry" headers="conceptId__table_j54_ltw_cn__entry__2">A potentially hazardous situation which, if not avoided, could result in death or serious injury</td>
+                     </tr>
+                     <tr class="row">
+                        <td class="entry" headers="conceptId__table_j54_ltw_cn__entry__1">Danger</td>
+                        <td class="entry" headers="conceptId__table_j54_ltw_cn__entry__2">An imminently hazardous situation which, if not avoided, will result in death or serious injury</td>
+                     </tr>
+                     <tr class="row">
+                        <td class="entry" headers="conceptId__table_j54_ltw_cn__entry__1">Tip</td>
+                        <td class="entry" headers="conceptId__table_j54_ltw_cn__entry__2">A helpful piece of advice</td>
+                     </tr>
+                  </tbody></table>
+         </div>
+         <div class="note tip note_tip"><span class="note__title">Tip:</span> The differences between notices, cautions, warnings and dangers are defined in the ANSI Z535 and ISO 3864 standards. These slight differences, however, are not always meaningful to the user. If your documentation does not have to comply with ANSI Z535 or ISO 3864, you do not have to apply the different labels as strictly. For example, you can use <code class="ph codeph">@type="caution"</code> to call attention to all sorts of hazardous situations.</div>
+      </section>
+   </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../en/to_dita_elements_task_topics.html">DITA elements for task topics</a></div></div></nav></article></main>

@@ -1,0 +1,59 @@
+---
+# Generated from DITA source
+layout: default
+title: "Multi-channel publishing"
+index: "../toc.html"
+---
+
+<nav role="toc" class="col-lg-3"><ul><li><a href="../en/to_topics_information_types.html">Topics and information types</a></li><li><a href="../en/to_creating_task_topic.html">Task topics</a></li><li><a href="../en/to_creating_concept_topic.html">Concept topics</a></li><li><a href="../en/to_reference_topics.html">Reference topics</a></li><li><a href="../en/to_light_fullon.html">DITA light and full-on DITA</a></li><li><a href="../en/to_ditamaps_bookmaps.html">DITA maps and bookmaps</a></li><li><a href="../en/to_creating_links.html">Creating links</a></li><li><a href="../en/to_reusing_content.html">Re-using content</a></li><li><a href="../en/to_conditional_processing.html">Conditional processing</a></li><li><a href="../en/to_publishing.html">Publishing</a><ul class="nav nav-list"><li class="active"><a href="../en/co_multichannel_publishing.html">Multi-channel publishing</a></li><li><a href="../en/to_dita_ot.html">The DITA Open Toolkit (DITA OT)</a></li><li><a href="../en/to_dita_2_pdf.html">DITA2PDF</a></li></ul></li><li><a href="../en/to_tips_and_tricks.html">Tips and tricks</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+   <h1 class="title topictitle1" id="ariaid-title1">Multi-channel publishing</h1>
+   
+   <div class="body conbody"><p class="shortdesc">Multi-channel publishing is publishing documentation in different output formats, such as webhelp or pdf.</p>
+      <section class="section">
+         <div class="p">One of the great advantages of DITA content is its ability to be published in many different kinds of output formats. Its characteristic re-use strategies along with conditional processing were designed with efficient content managing and publishing in mind. Essentially, one single-source map can become many different types of documents. <figure class="fig fignone" id="conceptId__fig_npm_ds3_jn">
+               <img class="image" id="conceptId__image_xyv_ds3_jn" src="../_media/graphics/multichannel_publishing.PNG">
+            </figure></div>
+      </section>
+      <section class="section"><h2 class="title sectiontitle">Structure vs. lay-out</h2>
+         
+         <p class="p">DITA is an ideal writing tool as it helps you organize your content into specific elements embedded within a larger, universal structure. These structuring elements have nothing to do with a lay-out, instead they are fixed compartments in which you store your documentation. This also means that when your documentation is fully written, the DITA file cannot be published and immediately used as is.</p>
+         <p class="p">The advantage of this universal (and free, open source) structure is that it can easily be opened in other programs more suited for publishing, such as publishing tools or DITA processors (Oxygen, XMetaL), which will do the transformation for you. They transform your base DITA files into a publishable file of your choosing, and in doing so, apply a new lay-out on top of the structure. Lay-out, in this sense, is merely a layer that makes the structure more visible and accessible to the reader.</p>
+         <p class="p">It is important to understand that the underlying structure is not changed when the DITA files are transformed. Your content does not change, it is merely put in a new outfit more suited to your needs.</p>
+         <div class="p">In summary: <table class="table frame-all" id="conceptId__table_syk_jmd_4n"><caption></caption><colgroup><col style="width:60mm"><col style="width:65mm"></colgroup><thead class="thead">
+                     <tr class="row">
+                        <th class="entry" id="conceptId__table_syk_jmd_4n__entry__1">DITA structure</th>
+                        <th class="entry" id="conceptId__table_syk_jmd_4n__entry__2">Lay-out</th>
+                     </tr>
+                  </thead><tbody class="tbody">
+                     <tr class="row">
+                        <td class="entry" headers="conceptId__table_syk_jmd_4n__entry__1">Focus on content</td>
+                        <td class="entry" headers="conceptId__table_syk_jmd_4n__entry__2">Focus on appearance</td>
+                     </tr>
+                     <tr class="row">
+                        <td class="entry" headers="conceptId__table_syk_jmd_4n__entry__1">Fixed in unchanging elements.</td>
+                        <td class="entry" headers="conceptId__table_syk_jmd_4n__entry__2">Options change from program to program.</td>
+                     </tr>
+                     <tr class="row">
+                        <td class="entry" headers="conceptId__table_syk_jmd_4n__entry__1">Will remain the same in different programs.</td>
+                        <td class="entry" headers="conceptId__table_syk_jmd_4n__entry__2">Might change if a document is opened in a different program.</td>
+                     </tr>
+                     <tr class="row">
+                        <td class="entry" headers="conceptId__table_syk_jmd_4n__entry__1">Adheres to strict DITA rules.</td>
+                        <td class="entry" headers="conceptId__table_syk_jmd_4n__entry__2">Adheres to rules of the individual programs and to the user's preferences.</td>
+                     </tr>
+                     <tr class="row">
+                        <td class="entry" headers="conceptId__table_syk_jmd_4n__entry__1">Allows the user to focus on content.</td>
+                        <td class="entry" headers="conceptId__table_syk_jmd_4n__entry__2">Can distract the user from writing content.</td>
+                     </tr>
+                  </tbody></table></div>
+      </section>
+      <section class="section"><h2 class="title sectiontitle">Publishing</h2>
+         
+         <p class="p">During publishing, the DITA structure is used as the skeleton on top of which a skin of lay-out is applied. This publishing process involves a number of steps that interpret DITA maps, resolve conref elements and cross-references, apply formatting numbering and labels, and map DITA elements to output format elements.</p>
+         <p class="p">During this process, the content is given a new look according to the requirements of the output format. Output which is intended to be viewed and used on a computer looks completely different from output designed, for instance, for tablets and phones. Each type has its own conventions and requirements, such as button size, font size, resolution etc.</p>
+      </section>
+      <section class="section"><h2 class="title sectiontitle">Publishing strategies</h2><div class="p">There are several ways of publishing your documentation:<figure class="fig fignone" id="conceptId__fig_wmc_m53_jn">
+               <img class="image" id="conceptId__image_zf1_z3c_4n" src="../_media/graphics/pdf_generation.png">
+            </figure></div>These ways can be grouped into two main methods for publishing documentation. The first method is by using the DITA Open Toolkit (OT) that is embedded in many DITA editors, such as Oxygen. This makes the publishing process easier as you can apply the type of transformation you want directly to your files, using the same program in which you've written them. Your processor will then run the files through the toolkit and generate the output you want.<p class="p">While using the OT is easy at first, it may require a lot of work and understanding of the processes involved to achieve a proper result. More often than not, the output from the OT gives your text a very basic lay-out. When you write and publish for different clients and different products, you might need varying lay-outs. Therefore, you might need to adjust the process manually to achieve the desired result.</p><p class="p">A second method that avoids this issue is DITA2PDF. Essentially, it involves using an intermediary program in which you can adjust the template of your lay-out accordingly before you publish to PDF. While it might still require some searching and puzzling, intermediary programs such as Adobe FrameMaker and Word tend to be more user-friendly and allow you to apply your desired lay-out template in one go.</p></section>
+   </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../en/to_publishing.html">Publishing</a></div></div></nav></article></main>

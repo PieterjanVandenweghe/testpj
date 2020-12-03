@@ -1,0 +1,55 @@
+---
+# Generated from DITA source
+layout: default
+title: "Different types of links"
+index: "../toc.html"
+---
+
+<nav role="toc" class="col-lg-3"><ul><li><a href="../en/to_topics_information_types.html">Topics and information types</a></li><li><a href="../en/to_creating_task_topic.html">Task topics</a></li><li><a href="../en/to_creating_concept_topic.html">Concept topics</a></li><li><a href="../en/to_reference_topics.html">Reference topics</a></li><li><a href="../en/to_light_fullon.html">DITA light and full-on DITA</a></li><li><a href="../en/to_ditamaps_bookmaps.html">DITA maps and bookmaps</a></li><li><a href="../en/to_creating_links.html">Creating links</a><ul class="nav nav-list"><li><a href="../en/to_about_creating_links.html">About creating links</a><ul class="nav nav-list"><li><a href="../en/co_why_create_links.html">Why create links?</a></li><li class="active"><a href="../en/co_types_links.html">Different types of links</a></li><li><a href="../en/re_guidelines_creating_links.html">Guidelines for creating links</a></li><li><a href="../en/co_role_of_IDs.html">The role of IDs</a></li></ul></li><li><a href="../en/to_creating_inline_links.html">Creating inline links</a></li><li><a href="../en/to_creating_related_links.html">Creating related links</a></li></ul></li><li><a href="../en/to_reusing_content.html">Re-using content</a></li><li><a href="../en/to_conditional_processing.html">Conditional processing</a></li><li><a href="../en/to_publishing.html">Publishing</a></li><li><a href="../en/to_tips_and_tricks.html">Tips and tricks</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+   <h1 class="title topictitle1" id="ariaid-title1">Different types of links</h1>
+   <div class="body conbody">
+      <div class="p">In DITA you can link your information together in many different ways. The system allows you to link:<ul class="ul" id="conceptId__ul_ws3_nyz_kn">
+            <li class="li">Within your topic text (inline links)</li>
+            <li class="li">At the end of your individual topics (related-links)</li>
+            <li class="li">Outside of your topic by using the DITA map structure (hierarchical)</li>
+            <li class="li">Outside of your topic by using a separate table (relationship table) in a DITA map</li>
+         </ul>Each type of linking has its advantages and disadvantages so it is good to know which type to use when.</div>
+      <p class="p">There are three different types of links available in DITA: hierarchical links, inline links and related links.</p>
+      <section class="section"><h2 class="title sectiontitle">Hierarchical links</h2>
+         
+         <p class="p">You create hierarchical links by nesting topics in your DITA map and creating parent, child and sibling topics. Doing so gives structure to your topics and helps users understand how you have organized your information. This hierarchy is used to create the sequence of topics in the output and/or the table of contents. It also influences automatically-generated navigation links and generated summary content in parent topics in some output formats.</p>
+      </section>
+      <div class="example">
+         <figure class="fig fignone" id="conceptId__fig_csl_qnc_jn">
+            <img class="image" id="conceptId__image_csw_qnc_jn" src="../_media/graphics/ditamap.PNG">
+         </figure>
+      </div>
+      <section class="section"><h2 class="title sectiontitle">Inline links</h2>
+         
+         <p class="p">Inline links are links that you add within the text of your topic, rather than directly to the DITA map structure or in the relationship table. They are cross-references which are displayed by the &lt;xref&gt; element.</p>
+         <div class="p">Inline links can be difficult to maintain and too many of them can distract or confuse users. Make sure to only use links when it is relevant to do so, otherwise the links:<ul class="ul" id="conceptId__ul_qyn_w4d_fn">
+               <li class="li">Can be disruptive: they break the flow of reading because they direct users to other topics before they have finished reading the information in the current topic.</li>
+               <li class="li">Create dependencies between topics that are difficult to maintain and restrict the extent to which you can re-use the topics.</li>
+               <li class="li">Can complicate navigation: using too many links can be a sign that you haven't organized your structure well. It might be necessary to reevaluate or even rewrite your topic and/or structure.</li>
+               <li class="li">Weigh content: links should be used to direct users to something important and relevant. The more you use links, the more they lose their value.</li>
+            </ul></div>
+      </section>
+      <div class="example">
+         <figure class="fig fignone" id="conceptId__fig_jb3_rnc_jn">
+            <img class="image" id="conceptId__image_s3w_znc_jn" src="../_media/graphics/inline_reference.PNG">
+         </figure>
+      </div>
+      <section class="section"><h2 class="title sectiontitle">Related links</h2>
+         
+         <div class="p">With related links, you can link up topics outside of the hierarchical linking system of the DITA map and effectively create automated links based on non-hierarchical relationships. For example, if you have grouped all of your concepts together, you can link up one concept topic to all of its related tasks. There are two ways to add related links:<ul class="ul" id="conceptId__ul_vsg_mw2_fn">
+               <li class="li">You can add a list of cross-references in a &lt;related-links&gt; elements at the end of your topic, manually linking it to other relevant information.</li>
+               <li class="li">You can create all of your links in one location, in a relationship table, and define how they relate to one another.</li>
+            </ul></div>
+      </section>
+      <div class="example">
+         <figure class="fig fignone" id="conceptId__fig_dpq_gc1_ln">
+            <img class="image" id="conceptId__image_pbl_gc1_ln" src="../_media/graphics/reltable_output.PNG">
+         </figure>
+      </div>
+   </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../en/to_about_creating_links.html">About creating links</a></div></div></nav></article></main>

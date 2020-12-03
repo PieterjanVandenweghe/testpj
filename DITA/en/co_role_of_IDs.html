@@ -1,0 +1,20 @@
+---
+# Generated from DITA source
+layout: default
+title: "The role of IDs"
+index: "../toc.html"
+---
+
+<nav role="toc" class="col-lg-3"><ul><li><a href="../en/to_topics_information_types.html">Topics and information types</a></li><li><a href="../en/to_creating_task_topic.html">Task topics</a></li><li><a href="../en/to_creating_concept_topic.html">Concept topics</a></li><li><a href="../en/to_reference_topics.html">Reference topics</a></li><li><a href="../en/to_light_fullon.html">DITA light and full-on DITA</a></li><li><a href="../en/to_ditamaps_bookmaps.html">DITA maps and bookmaps</a></li><li><a href="../en/to_creating_links.html">Creating links</a><ul class="nav nav-list"><li><a href="../en/to_about_creating_links.html">About creating links</a><ul class="nav nav-list"><li><a href="../en/co_why_create_links.html">Why create links?</a></li><li><a href="../en/co_types_links.html">Different types of links</a></li><li><a href="../en/re_guidelines_creating_links.html">Guidelines for creating links</a></li><li class="active"><a href="../en/co_role_of_IDs.html">The role of IDs</a></li></ul></li><li><a href="../en/to_creating_inline_links.html">Creating inline links</a></li><li><a href="../en/to_creating_related_links.html">Creating related links</a></li></ul></li><li><a href="../en/to_reusing_content.html">Re-using content</a></li><li><a href="../en/to_conditional_processing.html">Conditional processing</a></li><li><a href="../en/to_publishing.html">Publishing</a></li><li><a href="../en/to_tips_and_tricks.html">Tips and tricks</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+   <h1 class="title topictitle1" id="ariaid-title1">The role of IDs</h1>
+   <div class="body conbody">
+      <p class="p">When you want to link to an item, the program you use needs to be able to identify the item in question. It does this by checking its unique ID. However, in DITA, not all elements have an ID except in the case of the root elements (<code class="keyword markupname xmlelement">&lt;topic&gt;</code>, <code class="keyword markupname xmlelement">&lt;concept&gt;</code>, <code class="keyword markupname xmlelement">&lt;task&gt;</code> and <code class="keyword markupname xmlelement">&lt;reference&gt;</code>). The rest of the element IDs are optional.</p>
+      <p class="p">When you want to link to an item that isn't a root element, you need to give it an ID first. You can do this by adding a random number to its <code class="keyword markupname xmlatt">@id</code> attribute, or, more easily, you can have Oxygen automatically generate one. Oxygen allows you to right-click any element and choose <span class="ph uicontrol">Generate IDs</span>.</p>
+      <div class="note note note_note"><span class="note__title">Note:</span> IDs are also important when re-using content.</div>
+      <div class="example">
+         <div class="p">The generated element ID of a <code class="keyword markupname xmlelement">&lt;note&gt;</code> element:<figure class="fig fignone" id="conceptId__fig_v2v_w4c_jn">
+               <img class="image" id="conceptId__image_xhp_1pc_jn" src="../_media/graphics/element_id.PNG">
+            </figure></div>
+      </div>
+   </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../en/to_about_creating_links.html">About creating links</a></div></div></nav></article></main>

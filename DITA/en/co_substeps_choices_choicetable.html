@@ -1,0 +1,35 @@
+---
+# Generated from DITA source
+layout: default
+title: "Including substeps or choices: substeps, choices and choicetable"
+index: "../toc.html"
+---
+
+<nav role="toc" class="col-lg-3"><ul><li><a href="../en/to_topics_information_types.html">Topics and information types</a></li><li><a href="../en/to_creating_task_topic.html">Task topics</a><ul class="nav nav-list"><li><a href="../en/to_dita_elements_task_topics.html">DITA elements for task topics</a><ul class="nav nav-list"><li><a href="../en/co_title_task.html"> Titling the task: &lt;title&gt;</a></li><li><a href="../en/co_context.html">Introducing the task: context and prereq</a></li><li><a href="../en/co_steps_step_cmd.html">Defining the type of procedure: &lt;steps&gt; and &lt;steps-unordered&gt;</a></li><li><a href="../en/co_step_cmd.html">Writing the steps: &lt;step&gt; and &lt;cmd&gt;</a></li><li class="active"><a href="../en/co_substeps_choices_choicetable.html">Including substeps or choices: substeps, choices and choicetable</a></li><li><a href="../en/re_stepxmp_stepresult.html">Adding extra info to a step: &lt;stepxmp&gt;, &lt;stepresult&gt;, &lt;info&gt; and &lt;note&gt; </a></li><li><a href="../en/re_result_postrequisites.html">Concluding the task: &lt;example&gt;, &lt;result&gt; and &lt;postreq&gt;</a></li></ul></li></ul></li><li><a href="../en/to_creating_concept_topic.html">Concept topics</a></li><li><a href="../en/to_reference_topics.html">Reference topics</a></li><li><a href="../en/to_light_fullon.html">DITA light and full-on DITA</a></li><li><a href="../en/to_ditamaps_bookmaps.html">DITA maps and bookmaps</a></li><li><a href="../en/to_creating_links.html">Creating links</a></li><li><a href="../en/to_reusing_content.html">Re-using content</a></li><li><a href="../en/to_conditional_processing.html">Conditional processing</a></li><li><a href="../en/to_publishing.html">Publishing</a></li><li><a href="../en/to_tips_and_tricks.html">Tips and tricks</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+   <h1 class="title topictitle1" id="ariaid-title1">Including substeps or choices: <code class="keyword markupname xmlelement">&lt;substeps&gt;</code>, <code class="keyword markupname xmlelement">&lt;choices&gt;</code> and <code class="keyword markupname xmlelement">&lt;choicetable&gt;</code></h1>
+   <div class="body conbody">
+      <section class="section">A step can include substeps or choices. To insert substeps and choices into a &lt;step&gt; element, you use the &lt;substeps&gt;, &lt;choices&gt; and &lt;choicetable&gt; element.</section>
+      <section class="section"><h2 class="title sectiontitle">&lt;substeps&gt;</h2>
+         
+         <div class="p">To limit the number of steps in your task, you can add related steps as substeps to a single step. You then have to insert the &lt;substeps&gt; element after the &lt;cmd&gt; element of that step. By default, substeps are displayed in the output as lettered steps.<figure class="fig fignone" id="conceptId__fig_dwl_4pr_cn">
+               <img class="image" id="conceptId__image_s2z_n23_gn" src="../_media/graphics/ta_substeps.png">
+            </figure></div>
+         <div class="p">If you use substeps, take into account the following guidelines:<ul class="ul" id="conceptId__ul_u3j_xpr_cn">
+               <li class="li">The main step has to state the goal of the substeps. Do not use vague sentences like "Follow these steps": they give users no idea of what action the substeps will describe.</li>
+               <li class="li">Avoid using substeps inside other substeps. Nesting too many steps makes it hard for users to follow the procedure.</li>
+            </ul></div>
+      </section>
+      <section class="section"><h2 class="title sectiontitle"><code class="keyword markupname xmlelement">&lt;choices&gt;</code> and <code class="keyword markupname xmlelement">&lt;choicetable&gt;</code></h2>
+         
+         <p class="p">If users have to make a choice when executing a particular step, you have to add choices to that step. To do so, you can either use the <code class="keyword markupname xmlelement">&lt;choice&gt;</code> or the <code class="keyword markupname xmlelement">&lt;choicetable&gt;</code> element. The &lt;choice&gt; element will show the choices as a bulleted list, while the <code class="keyword markupname xmlelement">&lt;choicetable&gt;</code> element will display them in a table.</p>
+         <div class="p">There are no strict rules for when to use regular choices and when to use a choice table. You can, however, adopt the following best practices:<ul class="ul" id="conceptId__ul_ppf_prr_cn">
+               <li class="li">Only use the <code class="keyword markupname xmlelement">&lt;choices&gt;</code> element for simple choice lists. For example, it is perfectly suitable to present a list of simple options from which the users have to select the one they need.<figure class="fig fignone" id="conceptId__fig_ayw_bsr_cn">
+                     <img class="image" id="conceptId__image_icx_vc3_gn" src="../_media/graphics/ta_choices.png">
+                  </figure></li>
+               <li class="li">Use the <code class="keyword markupname xmlelement">&lt;choicetable&gt;</code> element as soon as the choices become more complex. For example, if you also want to specify when the user has to select a particular option, a table is more suitable than a list.<figure class="fig fignone" id="conceptId__fig_plb_csr_cn">
+                     <img class="image" id="conceptId__image_acf_nd3_gn" src="../_media/graphics/ta_choicetable.png">
+                  </figure><div class="note note note_note"><span class="note__title">Note:</span> Using a choice table instead of regular choices can also help you to reduce the number of words in your topic. By using a choicetable in the example above, you do not have to write "If you select <span class="ph uicontrol">Black and white</span>, the picture will become monochrome", "If you select <span class="ph uicontrol">Sepia</span>, the picture will become sepia-toned"...</div></li>
+            </ul></div>
+      </section>
+   </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../en/to_dita_elements_task_topics.html">DITA elements for task topics</a></div></div></nav></article></main>

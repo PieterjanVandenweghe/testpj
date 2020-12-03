@@ -1,0 +1,82 @@
+---
+# Generated from DITA source
+layout: default
+title: "What is a DITAVAL file"
+index: "../toc.html"
+---
+
+<nav role="toc" class="col-lg-3"><ul></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+   <h1 class="title topictitle1" id="ariaid-title1">What is a DITAVAL file</h1>
+   
+   <div class="body conbody">
+      <section class="section" id="co_what_is_a_ditaval_file__section_ld4_n1r_vjb">
+         <div class="p" id="co_what_is_a_ditaval_file__p_a24_2xq_vjb">A DITAVAL file (or a "conditional processing profile"<a name="fnsrc_1" href="#fntarg_1"><sup>1</sup></a>) is used to filter your DITA content depending on the type of:<ul class="ul" id="co_what_is_a_ditaval_file__ul_ogz_byq_vjb">
+               <li class="li">audience that your content is addressing: e.g. a novice audience, an expert audience ...</li>
+               <li class="li">product that your content is about: e.g. iPhone X, iPhone 11, iPhone 11 Pro ...</li>
+               <li class="li">platform that your audience is working with: e.g. iOS 12.4, iOS 13 ...</li>
+               <li class="li">...</li>
+            </ul></div>
+      </section>
+      <section class="section" id="co_what_is_a_ditaval_file__section_oms_hjw_vjb"><h2 class="title sectiontitle">Example of a DITAVAL file in Oxygen XML</h2>
+         
+         <p class="p" id="co_what_is_a_ditaval_file__p_szs_5yq_vjb">Within the DITAVAL file, you establish rules to include, exclude or flag DITA content that has been attributed a particular value.</p>
+      </section>
+      <div class="example">
+         <div class="p" id="co_what_is_a_ditaval_file__p_cj1_r5q_vjb">This is what a DITAVAL file might look like:<ul class="ul" id="co_what_is_a_ditaval_file__ul_bww_hgw_vjb">
+               <li class="li"> in the <span class="ph uicontrol">text</span> view of Oxygen XML:<pre class="pre codeblock"><code>&lt;val&gt;
+    &lt;prop action="exclude" att="audience" val="novice"/&gt;
+    &lt;prop action="flag" att="audience" val="general"/&gt;
+&lt;/val&gt;</code></pre></li>
+               <li class="li">in the <span class="ph uicontrol">Author</span> view of Oxygen XML:<figure class="fig fignone" id="co_what_is_a_ditaval_file__fig_lgr_lfp_vjb">
+                     <img class="image" id="co_what_is_a_ditaval_file__image_lnf_4fp_vjb" src="../_media/graphics/ditaval_filter_file.png">
+                  </figure></li>
+            </ul></div>
+         <p class="p" id="co_what_is_a_ditaval_file__p_qr5_p1r_vjb">The <code class="keyword markupname xmlatt">@action</code> attribute determines what should happen with the various attribute values of the <code class="keyword markupname xmlatt">@audience</code> attribute. In this case, the DITAVAL file will exclude all content, that is applicable to a novice audience, from the published output (in other words: all topics or elements that are attributed the attribute value <code class="keyword markupname xmlatt">@novice</code> for the <code class="keyword markupname xmlatt">@audience</code> attribute are exluded from the publication.). On the other hand, all topics or elements that are connected to the <code class="keyword markupname xmlatt">@general</code> audience are not only included, but also highlighted in the publication.</p>
+         
+      </div>
+      <section class="section" id="co_what_is_a_ditaval_file__section_jfy_t1r_vjb"><h2 class="title sectiontitle">Four possible actions of the DITAVAL file</h2>
+         
+         <div class="p" id="co_what_is_a_ditaval_file__p_kfy_t1r_vjb">A DITAVAL file defines four different conditional processing actions in an <code class="keyword markupname xmlatt">@action</code> attribute:<table class="table" id="co_what_is_a_ditaval_file__table_sck_dbr_vjb"><caption></caption><colgroup><col style="width:33.33333333333333%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                     <tr class="row">
+                        <th class="entry" id="co_what_is_a_ditaval_file__table_sck_dbr_vjb__entry__1">Value of <code class="keyword markupname xmlatt">@action</code> attribute</th>
+                        <th class="entry" id="co_what_is_a_ditaval_file__table_sck_dbr_vjb__entry__2">Description</th>
+                     </tr>
+                  </thead><tbody class="tbody">
+                     <tr class="row">
+                        <td class="entry" headers="co_what_is_a_ditaval_file__table_sck_dbr_vjb__entry__1">Include</td>
+                        <td class="entry" headers="co_what_is_a_ditaval_file__table_sck_dbr_vjb__entry__2">This action will include the content in the output. </td>
+                     </tr>
+                     <tr class="row">
+                        <td class="entry" headers="co_what_is_a_ditaval_file__table_sck_dbr_vjb__entry__1">Exclude</td>
+                        <td class="entry" headers="co_what_is_a_ditaval_file__table_sck_dbr_vjb__entry__2">This action will exclude (filter) the content from the output.</td>
+                     </tr>
+                     <tr class="row">
+                        <td class="entry" headers="co_what_is_a_ditaval_file__table_sck_dbr_vjb__entry__1">Flag</td>
+                        <td class="entry" headers="co_what_is_a_ditaval_file__table_sck_dbr_vjb__entry__2">This action will include and highlight the content in the output. </td>
+                     </tr>
+                     <tr class="row">
+                        <td class="entry" headers="co_what_is_a_ditaval_file__table_sck_dbr_vjb__entry__1">Passthrough</td>
+                        <td class="entry" headers="co_what_is_a_ditaval_file__table_sck_dbr_vjb__entry__2">
+                           <div class="p" id="co_what_is_a_ditaval_file__p_ysl_dfr_vjb">This action will:<ul class="ul" id="co_what_is_a_ditaval_file__ul_kx2_22r_vjb">
+                                 <li class="li">include the content in the output</li>
+                                 <li class="li">preserve the attribute value as part of the output stream for further processing within the (dynamic) output.</li>
+                              </ul></div>
+                           <div class="p" id="co_what_is_a_ditaval_file__p_mrq_dfr_vjb">In other words, the conditional processing (or filtering) does not take place during the publishing phase of the DITA content. Instead, the various types of content and their corresponding attribute values are passed on to the output itself, which is where the filtering will take place.<div class="note note note_note" id="co_what_is_a_ditaval_file__note_jpx_c1w_vjb"><span class="note__title">Note:</span> Take for example a search engine with filtering options. A customer of Booking.com will be able to efficiently search through the many possible accommodations that the site offers by using "filters," which are essentially attribute values that have been attributed to the various types of content:<figure class="fig fignone" id="co_what_is_a_ditaval_file__fig_pv3_gbw_vjb">
+                                    <img class="image" id="co_what_is_a_ditaval_file__image_hgt_42w_vjb" src="../_media/graphics/booking.com_filter_example_1.png">
+                                 </figure></div></div>
+                           <p class="p" id="co_what_is_a_ditaval_file__p_xqs_3yv_vjb">
+                              
+                           </p>
+                        </td>
+                     </tr>
+                  </tbody></table><a name="fnsrc_2" href="#fntarg_2"><sup>2</sup></a></div>
+      </section>
+      <section class="section" id="co_what_is_a_ditaval_file__section_rht_mbr_vjb"><h2 class="title sectiontitle">Applying the DITAVAL file to your DITA map</h2>
+         
+         <p class="p" id="co_what_is_a_ditaval_file__p_sht_mbr_vjb">
+            
+         </p>
+         
+      </section>
+   </div>
+<div class="fn"><a name="fntarg_1" href="#fnsrc_1"><sup>1</sup></a>  <a class="xref" href="https://www.oxygenxml.com/dita/1.3/specs/langRef/containers/ditaval-elements.html" target="_blank">https://www.oxygenxml.com/dita/1.3/specs/langRef/containers/ditaval-elements.html</a></div><div class="fn"><a name="fntarg_2" href="#fnsrc_2"><sup>2</sup></a>  Source: <a class="xref" href="https://www.webworks.com/Documentation/Reverb/index.html#page/Preparing%20and%20Publishing%20Content/Preparing%20DITA%20Files.3.07.htm" target="_blank">https://www.webworks.com/Documentation/Reverb/index.html#page/Preparing%20and%20Publishing%20Content/Preparing%20DITA%20Files.3.07.htm</a></div></article></main>
